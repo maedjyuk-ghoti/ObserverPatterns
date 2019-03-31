@@ -5,7 +5,6 @@ import android.os.Bundle
 import com.green.ben.observers.livedata.LiveDataFragment
 import com.green.ben.observers.observerpattern.ObserverPatternFragment
 import com.green.ben.observers.rxjava.RxJavaFragment
-import com.green.ben.observers.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         supportFragmentManager.beginTransaction()
-//            .replace(R.id.container, ObserverPatternFragment.newInstance())
+            .replace(R.id.container, ObserverPatternFragment.newInstance())
 //            .replace(R.id.container, LiveDataFragment.newInstance())
-            .replace(R.id.container, RxJavaFragment.newInstance())
+//            .replace(R.id.container, RxJavaFragment.newInstance())
             .commitNow()
     }
 }
